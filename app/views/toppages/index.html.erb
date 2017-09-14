@@ -1,9 +1,4 @@
-<% if logged_in? %>
 
-<p>ログイン完了ユーザ: 
-<%= current_user.name %>
-</p>
-<% else %>
  <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
@@ -13,6 +8,7 @@
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
+      
     </aside>
     <div class="col-xs-8">
       <%= render 'tasks/tasks', tasks: @tasks %>
